@@ -11,11 +11,10 @@
     "develop": "nodemon app.js"
   },
   "dependencies": {
-    "body-parser": "~1.0.1",
+    "body-parser": "^1.19.0",
     "config": "^1.29.4",
     "express": "^4.16.2",
-    "mongoose": "~3.6.13",
-    "puppeteer": "^1.0.0",
+    "puppeteer": "^1.20.0",
     "uuid": "^3.2.1",
     "workerpool": "^2.3.0"
   }
