@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const workerpool = require('workerpool');
+const packageJson = require('./package.json');
 // const spawn = require('child_process').spawn;
 const pool = workerpool.pool();
 const uuidv4 = require('uuid/v4');
@@ -20,7 +21,7 @@ const port = process.env.PORT || 8080;
 const router = express.Router();
 
 router.get('/ping', function(req, res) {
-  res.json({ message: 'all ok !' });
+  res.json({ message: `All ok! Version v${packageJson.version}` });
 });
 
 router.get('/png', getImage);
